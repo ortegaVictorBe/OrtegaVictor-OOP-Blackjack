@@ -92,14 +92,20 @@ function whatIsHappening() {
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4 text-center">
-                    <button type="submit" class="btn btn-warning btn-lg btn-block btn " name="hit">Hit!</button>
+                    <button type="submit" class="btn btn-warning btn-lg btn-block btn " name="hit">
+                        <img class="img-responsive" src="./img/card-game-hand_p.png">
+                        <span>Hit!</span>
+                    </button>
                 </div>
                 <div class="form-group col-md-4 text-center">
-                    <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="stand">Stand!</button>
+                    <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="stand"><img
+                            class="img-responsive" src="./img/like-up_p.png">
+                        <span>Stand!</span></button>
                 </div>
                 <div class="form-group col-md-4 text-center">
-                    <button type="submit" class="btn btn-warning btn-lg btn-block btn"
-                        name="surrender">Surrender!</button>
+                    <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="surrender"></i> <img
+                            class="img-responsive" src="./img/like-down_p.png">
+                        <span>Surrender!</span></button>
                 </div>
             </div>
             <div class="form-row">
