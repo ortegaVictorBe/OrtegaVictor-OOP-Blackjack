@@ -8,15 +8,13 @@ class Player
     public function __construct(Deck $theDeck, bool $lost=false){
       $this->lost=$lost;
       array_push($this->cards,$theDeck->drawCard() );
-      array_push($this->cards,$theDeck->drawCard() );
-    //   $_SESSION["s_deck"]=$deck;     
-      
+      array_push($this->cards,$theDeck->drawCard() );        
     }
 
     public function hit(Deck $theDeck){
         array_push($this->cards,$theDeck->drawCard());
         $score=$this->getScore();
-        $this->lost = ($score > 21) ? true : false;                 
+        $this->lost = ($score > 21) ? true : false;                
         
     }
 
