@@ -82,8 +82,10 @@ function whatIsHappening() {
 
 <body>
     <div class="container mt-1">
-        <div class="alert alert-dismissible alert-primary">
-            <h2 class="text-center">Blackjack!</h2>
+        <div class="alert alert-dismissible alert-primary mb-1 ">
+            <h2 class="text-center"><img class="img-responsive" src="./img/blackjack_p.png">
+                <span>Blackjack</span>
+            </h2>
         </div>
         <form method="post" action="">
             <div class=" form-row">
@@ -103,14 +105,14 @@ function whatIsHappening() {
                         <span>Stand!</span></button>
                 </div>
                 <div class="form-group col-md-4 text-center">
-                    <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="surrender"></i> <img
+                    <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="surrender"><img
                             class="img-responsive" src="./img/like-down_p.png">
                         <span>Surrender!</span></button>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <div class="jumbotron" id="machine" class="img-fluid">
+                    <div class="jumbotron p-3" id="machine" class="img-fluid">
                         <!-- <img src="img/robot.jpg" alt=""> -->
                         <p style="font-size:200px;" class="text-center">
                             <? foreach($blackjack->getDealer()->getCards() AS $card) {
@@ -123,7 +125,7 @@ function whatIsHappening() {
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <div class="jumbotron" id="player">
+                    <div class="jumbotron p-3" id="player">
                         <!-- <img src="img/person.jpg" alt="" class="img-fluid"> -->
                         <p style="font-size:200px;" class="text-center">
                             <? foreach($blackjack->getPlayer()->getCards() AS $card) {
