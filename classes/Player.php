@@ -41,4 +41,18 @@ class Player
     {
         return $this->cards;
     }    
+
+    /*** Get the value of lost*/ 
+    public function getLost()
+    {
+        return $this->lost;
+    }
+
+    /*** Set the value of lost*     * @return  self*/ 
+    public function setLost($lost)
+    {
+        $this->lost = $lost;
+
+        return $this;
+    }
 }

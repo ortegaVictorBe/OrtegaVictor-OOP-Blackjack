@@ -47,30 +47,38 @@
                         <span>Surrender!</span></button>
                 </div>
             </div>
+            <?php echo $winner ?>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <div class="jumbotron p-3" id="machine" class="img-fluid">
-                        <!-- <img src="img/robot.jpg" alt=""> -->
-                        <p style="font-size:200px;" class="text-center">
+                    <div class="jumbotron p-2" id="machine" class="img-fluid">
+                        <div>
+                            <img class="img-responsive" src="img/croupier_p.png"
+                                alt=""><span><strong>CROUPIER</strong></span>
+                            <p class="float-right" style="font-size=200px;"><strong>Score:
+                                    <?echo $blackjack->getDealer()->getScore(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <p style="font-size:175px;" class="text-center">
                             <? foreach($blackjack->getDealer()->getCards() AS $card) {
                            echo $card->getUnicodeCharacter(true);    
                          }?>
                         </p>
-                        <p style="font-size=100px;">Score:
-                            <?echo $blackjack->getDealer()->getScore(); ?>
-                        </p>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <div class="jumbotron p-3" id="player">
-                        <!-- <img src="img/person.jpg" alt="" class="img-fluid"> -->
-                        <p style="font-size:200px;" class="text-center">
+                    <div class="jumbotron p-2" id="player">
+                        <div>
+                            <img class="img-responsive" src="img/player_p.png"
+                                alt=""><span><strong>PLAYER</strong></span>
+                            <p class="float-right" style="font-size=200px;"><strong>Score:
+                                    <?echo $blackjack->getPlayer()->getScore(); ?>
+                                </strong>
+                            </p>
+                        </div>
+                        <p style="font-size:175px;" class="text-center">
                             <? foreach($blackjack->getPlayer()->getCards() AS $card) {
-                           echo $card->getUnicodeCharacter(true);    
-                         }?>
-                        </p>
-                        <p style="font-size=100px;">Score:
-                            <?echo $blackjack->getPlayer()->getScore(); ?>
+                               echo $card->getUnicodeCharacter(true);}?>
                         </p>
                     </div>
                 </div>
