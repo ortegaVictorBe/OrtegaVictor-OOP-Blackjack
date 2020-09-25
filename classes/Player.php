@@ -19,7 +19,7 @@ class Player
     }
 
     public function surrender(){
-        $this->lost=false;
+        $this->lost=true;
     }
 
     public function getScore():int{
@@ -41,12 +41,6 @@ class Player
     {
         return $this->cards;
     }    
-
-    /*** Get the value of lost*/ 
-    public function getLost()
-    {
-        return $this->lost;
-    }
 
     /*** Set the value of lost*     * @return  self*/ 
     public function setLost($lost)
