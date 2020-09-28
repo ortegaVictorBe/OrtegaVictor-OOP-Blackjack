@@ -86,4 +86,12 @@ class Blackjack
      }
      return $winner;
  }
+
+ public function getUserMessage(){
+     return "<div class='alert alert-dismissible alert-success mb-1 mt-1 '>
+     <h5 class='text-center'><img class='img-responsive' src='./img/playing_p.png'>
+         <span>Playing ...</span>
+     </h5>
+ </div>";
+ }
 }

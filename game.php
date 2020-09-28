@@ -55,7 +55,7 @@
                 </div>
                 <?php }?>
             </div>
-            <?php echo $winner ?>
+            <?php echo $userMessage ?>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <div class="jumbotron p-2" id="machine" class="img-fluid">
