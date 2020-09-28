@@ -88,8 +88,8 @@ class Blackjack
  }
 
  public function getUserMessage(){
-     return "<div class='alert alert-dismissible alert-success mb-1 mt-1 '>
-     <h5 class='text-center'><img class='img-responsive' src='./img/playing_p.png'>
+     return "<div class='alert alert-dismissible alert-primary mb-1 mt-1 '>
+     <h5 class='text-center'><i class='fa fa-spinner fa-pulse fa-1x fa-fw'></i></i>
          <span>Playing ...</span>
      </h5>
  </div>";
