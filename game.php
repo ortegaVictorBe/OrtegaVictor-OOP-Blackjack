@@ -30,22 +30,30 @@
                         <span>New Game!</span>
                     </button>
                 </div>
+                <?php if (!$blackjack->getPlayer()->hasLost() && !$blackjack->getDealer()->hasLost()){ ?>
                 <div class="form-group col-md-3 text-center">
                     <button type="submit" class="btn btn-warning btn-lg btn-block btn " name="hit" value="hit">
                         <img class="img-responsive" src="./img/card-game-hand_p.png">
                         <span>Hit!</span>
                     </button>
                 </div>
+                <?php }?>
+
+                <?php if (!$blackjack->getPlayer()->hasLost() && !$blackjack->getDealer()->hasLost()){ ?>
                 <div class="form-group col-md-3 text-center">
                     <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="stand" value="stand"><img
                             class="img-responsive" src="./img/like-up_p.png">
                         <span>Stand!</span></button>
                 </div>
+                <?php }?>
+
+                <?php if (!$blackjack->getPlayer()->hasLost() && !$blackjack->getDealer()->hasLost()){ ?>
                 <div class="form-group col-md-3 text-center">
                     <button type="submit" class="btn btn-warning btn-lg btn-block btn" name="surrender"
                         value="surrender"><img class="img-responsive" src="./img/like-down_p.png">
                         <span>Surrender!</span></button>
                 </div>
+                <?php }?>
             </div>
             <?php echo $winner ?>
             <div class="form-row">

@@ -46,23 +46,32 @@ class Blackjack
          $winner="CROUPIER WINS";         
 
      }elseif (!$this->dealer->hasLost() && !$this->player->hasLost()) {
+            
+        $dealerScore=$this->dealer->getScore();
+        $playerScore=$this->player->getScore();
 
-            if ($this->dealer->getScore() == 21){
-                $winner="CROUPIER WINS - BLACKJACK!";            
+        if ($dealerScore == 21){
+                $winner="CROUPIER WINS - BLACKJACK!";
+                $this->player->setlost(true);            
 
-            }elseif ($this->player->getScore() == 21) {
+            }elseif ($playerScore == 21) {
                 $winner="PLAYER WINS - BLACKJACK!";
+                $this->dealer->setlost(true);
                 
             } else{
 
-                  if($this->dealer->getScore() == $this->player->getScore()){
-                      $winner="TIE !";
+                    if($dealerScore == $playerScore){
+                        $winner="TIE !";
+                        $this->player->setlost(true);
+                        $this->dealer->setlost(true);
 
-                  }elseif ($this->dealer->getScore() > $this->player->getScore()) {
-                      $winner="CROUPIER WINS";
+                    }elseif ($dealerScore > $playerScore) {
+                        $winner="CROUPIER WINS";
+                        $this->player->setlost(true);
 
-                  }else{
-                    $winner="PLAYER WINS";
+                    }else{
+                        $winner="PLAYER WINS";
+                        $this->dealer->setlost(true);
                   }
             }
             

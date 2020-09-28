@@ -24,7 +24,8 @@ if (isset($_SESSION['blackjack']) && !isset($_POST["newGame"])){
        }
     }
 
-if ($_SERVER["REQUEST_METHOD"]=="POST"){
+//checking if someone Loose    
+if ($_SERVER["REQUEST_METHOD"]=="POST" ){
     if (isset($_POST["hit"])){
         //Calling the  hit function : 
         $blackjack->getPlayer()->hit($blackjack->getDeck());
@@ -33,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
             $winner=$blackjack->getWinner();
             SESSION_UNSET();
+            
+            
 
         }else{
 
@@ -45,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $blackjack->getDealer()->hit($blackjack->getDeck());
         $winner=$blackjack->getWinner();
         SESSION_UNSET();
+        
     }
     
     if (isset($_POST["surrender"])){
@@ -52,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $blackjack->getPlayer()->surrender();
         $winner=$blackjack->getWinner();
         SESSION_UNSET();
+        
     }    
 }
 //Drawin the html of the game
